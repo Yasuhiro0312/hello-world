@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
-        # this is my public repo name
-        uses: miyauci/hello-action@v1.0.0
-        with:
-          who-to-greet: ${{ secrets.SECRET_GREETING }}
+#       - name: Hello world action step
+#         id: hello
+#         # this is my public repo name
+#         uses: miyauci/hello-action@v1.0.0
+#         with:
+#           who-to-greet: ${{ secrets.SECRET_GREETING }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
